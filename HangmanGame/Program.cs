@@ -11,7 +11,7 @@ namespace HangmanGame
             var figure = new HangmanFigure();
             var game = new HangmanGame(GetRandomWord());
 
-            while (!game.IsWon() && !game.IsLost())
+            while (!game.GameIsWon() && !game.GameIsLost())
             {
                 Console.WriteLine(game.GetCurrentWord());
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -36,7 +36,7 @@ namespace HangmanGame
                 }
             }
 
-            if (game.IsWon())
+            if (game.GameIsWon())
             {
                 Console.Clear();
                 Console.ForegroundColor= ConsoleColor.Green;

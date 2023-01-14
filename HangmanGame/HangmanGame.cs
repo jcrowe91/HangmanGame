@@ -49,12 +49,12 @@ namespace HangmanGame
             }
         }
 
-        public bool IsWon()
+        public bool GameIsWon()
         {
             return currentWord == _word;
         }
 
-        public bool IsLost()
+        public bool GameIsLost()
         {
             return remainingGuesses == 0;
         }
