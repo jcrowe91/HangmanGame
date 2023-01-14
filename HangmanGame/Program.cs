@@ -55,6 +55,13 @@ namespace HangmanGame
             }
         }
 
+        static string GetRandomWord()
+        {
+            string[] words = { "apple", "banana", "cat", "dog", "elephant", "flower", "guitar", "hat", "igloo", "jacket", "kangaroo", "lion", "moon", "nest", "ocean", "penguin", "queen", "rabbit", "sun", "truck" };
+            Random rnd = new Random();
+            return words[rnd.Next(0, words.Length)];
+        }
+#region ASCII ARTWORK
         public static void Introduction()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -73,13 +80,8 @@ namespace HangmanGame
         {
             Console.WriteLine("     |/|\r\n     |/|\r\n     |/|\r\n     |/|\r\n     |/|\r\n     |/|\r\n     |/| /¯)\r\n     |/|/\\/\r\n     |/|\\/\r\n    (¯¯¯)\r\n    (¯¯¯)\r\n    (¯¯¯)\r\n    (¯¯¯)\r\n    (¯¯¯)\r\n    /¯¯/\\\r\n   / ,^./\\\r\n  / /   \\/\\\r\n / /     \\/\\\r\n( (       )/)\r\n| |       |/|\r\n| |       |/|\r\n| |       |/|\r\n( (       )/)\r\n \\ \\     / /\r\n  \\ `---' /\r\n   `-----'    \r\n\r\r\n\r\n");
         }
+#endregion
 
-        static string GetRandomWord()
-        {
-            string[] words = { "apple", "banana", "cat", "dog", "elephant", "flower", "guitar", "hat", "igloo", "jacket", "kangaroo", "lion", "moon", "nest", "ocean", "penguin", "queen", "rabbit", "sun", "truck" };
-            Random rnd = new Random();
-            return words[rnd.Next(0, words.Length)];
-        }
     }
 
 
