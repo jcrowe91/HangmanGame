@@ -44,7 +44,7 @@ namespace HangmanGame
             {
                 Console.WriteLine("You lost.");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("The correct word was: " + game.word);
+                Console.WriteLine("The correct word was: " + game._word);
                 Console.ResetColor();
             }
         }

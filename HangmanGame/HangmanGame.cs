@@ -10,13 +10,13 @@ namespace HangmanGame
     {
         private string currentWord;
         private int remainingGuesses;
-        public string word;
+        public string _word;
         private HashSet<char> guessedLetters;
 
-        public HangmanGame(string _word)
+        public HangmanGame(string word)
         {
-            word = _word;
-            currentWord = new string('_', _word.Length);
+            _word = word;
+            currentWord = new string('_', word.Length);
             remainingGuesses = 7;
             guessedLetters = new HashSet<char>();
         }
@@ -31,11 +31,11 @@ namespace HangmanGame
             }
             guessedLetters.Add(letter);
 
-            if (word.Contains(letter))
+            if (_word.Contains(letter))
             {
-                for (int i = 0; i < word.Length; i++)
+                for (int i = 0; i < _word.Length; i++)
                 {
-                    if (word[i] == letter)
+                    if (_word[i] == letter)
                     {
                         currentWord = currentWord.Remove(i, 1).Insert(i, letter.ToString());
                     }
@@ -51,7 +51,7 @@ namespace HangmanGame
 
         public bool IsWon()
         {
-            return currentWord == word;
+            return currentWord == _word;
         }
 
         public bool IsLost()
